@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "NGUYEN THI NGAN HUE",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 141, "left": -285.2, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -162.6, "left": -29.4, "attrs": {} },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": 222.9,
+      "left": -336,
+      "attrs": { "pixels": "32" }
+    }
+  ],
+  "connections": [
+    [ "strip1:VSS", "uno:GND.2", "black", [ "h-9.6", "v-221.5" ] ],
+    [ "strip1:DIN", "uno:12", "green", [ "v-154", "h230.4", "v-268.8", "h210.7" ] ],
+    [ "strip1:VDD", "uno:5V", "red", [ "h28.8", "v-105.6", "h437.8" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "NGUYEN THI NGAN HUE",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 237, "left": -170, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -47.4, "left": 37.8, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 313.4,
+      "left": -57.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 351.6, "left": -121, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 272.75,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "btn1:1.l", "bb1:10t.e", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:17t.e", "", [ "$bb" ] ],
+    [ "btn1:1.r", "uno:2", "orange", [ "v0" ] ],
+    [ "btn1:1.l", "uno:GND.2", "black", [ "h0" ] ],
+    [ "led1:A", "bb1:6b.j", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:5b.j", "", [ "$bb" ] ],
+    [ "led1:A", "uno:9", "green", [ "v0" ] ],
+    [ "led1:C", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "uno:GND.3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
